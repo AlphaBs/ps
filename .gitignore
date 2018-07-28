@@ -1,0 +1,4 @@
+#git ignore file
+#bin(exe), src(workspace)
+bin/
+src/
