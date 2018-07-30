@@ -1,4 +1,4 @@
-//2750
+//2750 - selection sort 선택정렬
 
 using System;
 
@@ -6,6 +6,7 @@ class Program
 {
 	public static void Main()
 	{
+		//입력
 		var count = int.Parse(Console.ReadLine());
 		int[] arr = new int[count];
 		
@@ -14,6 +15,7 @@ class Program
 			arr[p] = int.Parse(Console.ReadLine());
 		}
 		
+		//정렬
 		for (int i = 0; i < count; i++)
 		{
 			int min = arr[i];
@@ -32,6 +34,7 @@ class Program
 			arr[index] = t;
 		}
 
+		//출력
 		for (int k = 0; k < arr.Length; k++)
 		{
 			Console.WriteLine(arr[k]);
