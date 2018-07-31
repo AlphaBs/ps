@@ -1,4 +1,4 @@
-//2750 - insertion sort 삽입정렬
+//2750 - bubble sort (버블 정렬)
 
 using System;
 
@@ -18,15 +18,17 @@ class Program
 		}
 		
 		//정렬
-		for (int i = 1; i < count; i++)
+		for (int i = 0; i < count -  1; i++)
 		{
-			int key = arr[i];
-			for (int j = i - 1; j >= 0; j--)
+			for (int j = 0; j < count - 1; j++)
 			{
-				if (key > arr[j])
-					break;
-				arr[j + 1] = arr[j];
-				arr[j] = key;
+				if (arr[j] > arr[j + 1])
+				{
+					int k = arr[j];
+					arr[j] = arr[j + 1];
+					arr[j + 1] = k;
+					
+				}
 			}
 		}
 		
