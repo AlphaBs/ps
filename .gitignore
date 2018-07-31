@@ -1,4 +1,5 @@
 #git ignore file
 #bin(exe), src(workspace)
-bin/
-src/
+CSharp/bin/
+CSharp/src/
+CSharp/goorm.manifest
