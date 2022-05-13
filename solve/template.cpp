@@ -1,6 +1,6 @@
-#include "iostream"
-#include "cstdio"
-#include "algorithm"
+#include <iostream>
+#include <cstdio>
+#include <algorithm>
 
 using namespace std;
 

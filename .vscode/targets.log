@@ -1,0 +1,8 @@
+make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --question
+'\\wsl.localhost\Ubuntu\home\ksi123456ab\git\ps'
+���� ��θ� ���� ���͸��� �Ͽ� CMD.EXE�� ����Ǿ����ϴ�. UNC ��δ�
+�������� �ʽ��ϴ�. Windows ���͸��� �⺻���� �մϴ�.
+
+'make.exe'��(��) ���� �Ǵ� �ܺ� ����, ������ �� �ִ� ���α׷�, �Ǵ�
+��ġ ������ �ƴմϴ�.
+
