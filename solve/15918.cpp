@@ -4,34 +4,16 @@
 
 using namespace std;
 
-bool check(int n, int* nums)
+int func(int index, int n, int* nums)
 {
-    bool valid = true;
-    for (int i = 0; i < n; i++)
+    if (nums[index] != 0)
+        return 0;
+
+    for (int i = 1; i <= n; i++)
     {
-        bool nextValid = true;
-        bool prevValid = true;
-        int value = nums[i];
-
-        int nextIndex = i + value + 1;
-        int prevIndex = i - value - 1;
-        if (nextIndex >= n || nums[i] != nums[nextIndex])
-        {
-            nextValid = false;
-        }
-        if (prevIndex < 0 || nums[i] != nums[prevIndex])
-        {
-            prevValid = false;
-        }
-
-        if (!nextValid && !prevValid)
-        {
-            valid = false;
-            break;
-        }
+        int nextIndex = index + i + 1;
+        
     }
-
-    return valid;
 }
 
 int main() 
@@ -48,27 +30,10 @@ int main()
     cin >> n >> x >> y;
 
     int nums[30];
-    for (int i = 0; i < 13; i++)
-    {
-        nums[i*2] = i+1;
-        nums[i*2+1] = i+1;
-    }
+    int fix = y - x - 1;
+    nums[x] = fix;
+    nums[y] = fix;
 
-    int count = 0;
-    do
-    {
-        if (nums[x-1] != nums[y-1])
-            continue;
-
-        if (check(n*2, nums))
-        {
-            //for (int k = 0; k < n*2; k++)
-            //    cout << nums[k];
-            //cout << "\n";
-            count++;
-        }
-    } while (next_permutation(nums, nums + n*2));
-    
-    cout << count;
+    cout << func(0, n, nums);
     return 0;
 }
