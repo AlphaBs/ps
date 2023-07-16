@@ -1,18 +1,39 @@
+// https://www.acmicpc.net/problem/11726
+
 #include <iostream>
+#include <cstdio>
+#include <algorithm>
+
+using namespace std;
+
+const int MODER = 10007;
+
+int cache[1111];
+
+int solve(int n)
+{
+    if (n <= 0) return 0;
+    if (n == 1) return 1;
+    if (n == 2) return 2;
+
+    int& ret = cache[n];
+    if (ret > 0) return ret;
+
+    ret = (solve(n - 1) + solve(n - 2)) % MODER;
+    return ret;
+}
 
 int main()
 {
-    int input;
-    std::cin >> input;
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
 
-    unsigned result = 0;
-    for (int a = 0; a <= input / 2; a++)
-    {
-        int b = input - 2 * a;
-        //std::cout << a << ", " << b << std::endl;
-        result += nCr(a+b, a) % 10'007;
-    }
+    fill(cache, cache + 1111, -1);
 
-    std::cout << result % 10'007 << std::endl;
+    int n;
+    cin >> n;
+    cout << solve(n);
+
     return 0;
 }
