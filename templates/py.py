@@ -1,5 +1,5 @@
 # https://www.acmicpc.net/problem/****
 
 import sys
-a = sys.stdin.readline()
-sys.stdout.write(a)
+sys.setrecursionlimit(11111)
+n = int(sys.stdin.readline())
