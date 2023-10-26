@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .td-header {
+                text-align: right;
+                font-weight: bold;
+            }
+
+            button {
+                width: 100%;
+                height: 50px;
+            }
+
+            textarea {
+                width: 100%;
+                height: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>INPUT</h2>
+        <textarea id="input-textarea"></textarea><br>
+        <button onclick="run()">RUN</button>
+        <h2>OUTPUT</h2>
+        <textarea id="output-textarea"></textarea><br>
+        <table>
+            <tr>
+                <td class="td-header">started : </td>
+                <td id="started">none</td>
+            </tr>
+            <tr>
+                <td class="td-header">runtime : </td>
+                <td id="runtime">none</td>
+            </tr>
+            <tr>
+                <td class="td-header">inputs : </td>
+                <td id="inputs">none</td>
+            </tr>
+            <tr>
+                <td class="td-header">outputs : </td>
+                <td id="outputs">none</td>
+            </tr>
+            <script src="index.js"></script>
+            <script src="main.js"></script>
+        </table>
+    </body>
+</html>
