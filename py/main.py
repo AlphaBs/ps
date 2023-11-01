@@ -1,38 +1,15 @@
-# https://www.acmicpc.net/problem/5639
+# https://www.acmicpc.net/problem/2525
 
 import sys
 sys.setrecursionlimit(111_111)
 
-trees = {}
-root = None
+a, b = map(int, sys.stdin.readline().split())
+c = int(sys.stdin.readline())
 
-def addNode(root, node):
-    if root not in trees:
-        trees[root] = [None, None]
+b += c
 
-    if root > node:
-        if trees[root][0] is None:
-            trees[root][0] = node
-        else:
-            addNode(trees[root][0], node)
-    else:
-        if trees[root][1] is None:
-            trees[root][1] = node
-        else:
-            addNode(trees[root][1], node)
+a += b // 60
+a %= 24
+b %= 60
 
-for line in sys.stdin:
-    if root is None:
-        root = int(line)
-    else:
-        addNode(root, int(line))
-
-def traversal(root):
-    if root is None:
-        return
-    if root in trees:
-        traversal(trees[root][0])
-        traversal(trees[root][1])
-    sys.stdout.write(f'{root}\n')
-
-traversal(root)
+print(a, b)
