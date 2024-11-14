@@ -1,0 +1,1 @@
+{"name":"Local: 12015","url":"c:\\p\\programming\\git\\ps\\solve\\12015.cpp","tests":[{"id":1731046513601,"input":"6\n10 20 10 30 20 50","output":"4"},{"id":1731048279210,"input":"7\n5 6 7 1 2 3 4","output":"4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\p\\programming\\git\\ps\\solve\\12015.cpp","group":"local","local":true}
