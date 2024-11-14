@@ -1,7 +1,7 @@
 #git ignore file
 #bin(exe), src(workspace)
 cpp
-.out
 cs
 py
-.exe
+*.exe
+*.out
