@@ -1,9 +1,18 @@
-﻿using static System.Console;
-int i=3,n;while(!int.TryParse(ReadLine(),out n))i--;n+=i;
-if(n%3<1)Write("Fizz");
-if(n%5<1)Write("Buzz");
-if(n%3>0&&n%5>0)Write(n);
-
-
-
-//Write((n%3<1?"Fizz":"")+(n%5<1?"Buzz":n%3>0?n:""));
+﻿var line = Console.ReadLine()!;
+var me = Console.ReadLine()!;
+Console.Write(
+    line
+        .Split(' ')
+        .Select((score, i) => (score, i + 1))
+        .First(e => e.score == me)
+        .Item2 switch 
+        {
+            <=  5 => "A+",
+            <= 15 => "A0",
+            <= 30 => "B+",
+            <= 35 => "B0",
+            <= 45 => "C+",
+            <= 48 => "C0",
+            _ => "F"
+        }
+);

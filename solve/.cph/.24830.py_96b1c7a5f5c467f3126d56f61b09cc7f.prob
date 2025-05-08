@@ -1,0 +1,1 @@
+{"name":"Local: 24830","url":"c:\\p\\programming\\git\\ps\\solve\\24830.py","tests":[{"id":1743519608647,"input":"5\n4 * 5\n2 + 5\n3 - 1\n20 / 3\n13 / 24","output":"400\n-393\n-786\n10\n7"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\p\\programming\\git\\ps\\solve\\24830.py","group":"local","local":true}
